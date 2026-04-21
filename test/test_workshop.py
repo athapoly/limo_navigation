@@ -13,14 +13,14 @@ def test_package_xml_exists():
 
 
 def test_nav_params_have_astar_plugin():
-    """nav2_params_astar.yaml must specify the SmacPlanner2d plugin."""
+    """nav2_params_astar.yaml must specify the SmacPlanner2D plugin."""
     params_path = os.path.join(
         os.path.dirname(__file__), '..', 'params', 'nav2_params_astar.yaml'
     )
     with open(params_path) as f:
         content = f.read()
-    assert 'SmacPlanner2d' in content, \
-        'A* plugin (SmacPlanner2d) not found in nav2_params_astar.yaml'
+    assert 'SmacPlanner2D' in content, \
+        'A* plugin (SmacPlanner2D) not found in nav2_params_astar.yaml'
 
 
 def test_slam_params_are_mapping_mode():
